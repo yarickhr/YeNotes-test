@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Helmet from "react-helmet";
 
-import './App.css';
+import 'normalize.css';
+import './App.scss';
 import Numeral from './components/Numeral'
 
 class App extends Component {
@@ -57,9 +58,12 @@ class App extends Component {
 
 
         <header></header>
-        {result && (
-          <Numeral word={word}/>
-        )}
+
+        <main className="main">
+          {result && (
+            <Numeral word={word}/>
+          )}
+        </main>
         <footer></footer>
       </div>
     );

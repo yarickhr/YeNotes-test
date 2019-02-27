@@ -18,19 +18,28 @@ class Numeral extends Component {
     let preposition = <span dangerouslySetInnerHTML={{__html: word && word.locative_label + ' '}} />;
 
     return (
-      <main className="main">
+      <main className="word">
 
-            <div className="word-title">{word.main_field_value} ({word.word_type.abbr})</div>
-            {word.explanations.general.length ? <div className="word-explanation">({word.explanations.general})</div> : ''}
+        <div className="heading">
+          <div className="word-title">{word.main_field_value} ({word.word_type.name.toLowerCase()})</div>
+          <div className="word-explanation">({word.explanations.general.length ? word.explanations.general : 'кількість'})</div>
+        </div>
 
-            <h2>{word.main_field_value} - {word.word_type.name} ({word.number_formatted})</h2>
 
+        <div className="row">
+
+          <div className="side">
+            <button className="active">{word.main_field_value} ({word.word_type.abbr})</button>
+            <button className="">{word.main_field_value} ({word.word_type.abbr}) ({word.number_formatted})</button>
+          </div>
+
+          <div className="table">
             <table>
               <thead>
                 <tr>
-                  <td>Відмінки</td>
-                  <td>Чоловічий та середній</td>
-                  <td>Жіночий</td>
+                  <th>Відмінки</th>
+                  <th>Чоловічий та середній</th>
+                  <th>Жіночий</th>
                 </tr>
               </thead>
               <tbody>
@@ -52,8 +61,11 @@ class Numeral extends Component {
                   })
                 }
               </tbody>
-
             </table>
+          </div>
+
+        </div>
+
 
       </main>
     );
