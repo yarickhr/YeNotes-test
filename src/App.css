@@ -1,27 +1,34 @@
 @font-face {
-  font-family: Helvetica; /* Имя шрифта */
-  src: url(/assets/fonts/Helvetica.otf); /* Путь к файлу со шрифтом */
+  font-family: 'Helvetica';
+  src:
+  url('/assets/fonts/HelveticaRegular/HelveticaRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaBold';
+  src:
+  url('/assets/fonts/HelveticaBold/HelveticaBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 body {
   color: rgb(18, 45, 75);
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+header,
+footer {
+  background-color: rgb(18, 45, 75);
+}
+header {
+  height: 70px;
+}
+footer {
+  height: 144px;
 }
 .main {
   background-color: #f6f6f5;
