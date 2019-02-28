@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/YeNotes-test/precache-manifest.344bf0dbd8bf2824965e8cdebac8ed9d.js"
+  "/YeNotes-test/build/precache-manifest.b56a16beec8e90a84e052f772d1bd87f.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/YeNotes-test/index.html", {
+workbox.routing.registerNavigationRoute("/YeNotes-test/build/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
