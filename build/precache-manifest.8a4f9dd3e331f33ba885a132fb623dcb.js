@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/YeNotes-test/build/static/js/runtime~main.8a850066.js"
   },
   {
-    "revision": "0e749e1786a880f27e42",
-    "url": "/YeNotes-test/build/static/js/main.0e749e17.chunk.js"
+    "revision": "a90c680d57a5395e6f61",
+    "url": "/YeNotes-test/build/static/js/main.a90c680d.chunk.js"
   },
   {
     "revision": "3a4dbb340a59a7e800f1",
     "url": "/YeNotes-test/build/static/js/2.3a4dbb34.chunk.js"
   },
   {
-    "revision": "0e749e1786a880f27e42",
-    "url": "/YeNotes-test/build/static/css/main.8385ab5f.chunk.css"
+    "revision": "a90c680d57a5395e6f61",
+    "url": "/YeNotes-test/build/static/css/main.902a1ac5.chunk.css"
   },
   {
     "revision": "3a4dbb340a59a7e800f1",
     "url": "/YeNotes-test/build/static/css/2.7f5c6357.chunk.css"
   },
   {
-    "revision": "f9f24637d03c6017cf0e76a345d49c2a",
+    "revision": "8390996da8250e6453ae1bcd57530936",
     "url": "/YeNotes-test/build/index.html"
   }
 ];
