@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/YeNotes-test/build/static/css/2.7f5c6357.chunk.css"
   },
   {
-    "revision": "8390996da8250e6453ae1bcd57530936",
+    "revision": "a46dcd99efa88092ab5a87fff588d07b",
     "url": "/YeNotes-test/build/index.html"
   }
 ];
