@@ -10,3 +10,14 @@
   font-weight: normal;
   font-style: normal;
 }
+
+.main {
+  background-image: url(../img/text-foto.png);
+}
+.col-word .widget-box {
+  background-image: url(../img/shepherd.jpg);
+}
+
+.col-play .widget-box {
+  background-image: url(../img/create.jpg);
+}

@@ -4,7 +4,11 @@ import Helmet from "react-helmet";
 
 import 'normalize.css';
 import './App.scss';
-import Numeral from './components/Numeral'
+
+import Numeral from './components/Numeral/Numeral';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Widgets from './components/Widgets/Widgets';
 
 class App extends Component {
 
@@ -57,14 +61,16 @@ class App extends Component {
           />
 
 
-        <header></header>
+        <Header />
 
         <main className="main">
           {result && (
             <Numeral word={word}/>
           )}
+          <Widgets/>
         </main>
-        <footer></footer>
+
+        <Footer/>
       </div>
     );
   }

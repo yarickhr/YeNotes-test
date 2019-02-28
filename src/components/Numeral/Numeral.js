@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const CASES = {
   'nominative': 'Називний',
@@ -9,40 +9,43 @@ const CASES = {
   'locative': 'Місцевий',
 };
 
-class Numeral extends Component {
+const Numeral = ({word}) => {
 
-  render() {
+  let preposition = <span dangerouslySetInnerHTML={{__html: word && word.locative_label + ' '}} />;
 
-    let word = this.props.word;
+  return (
 
-    let preposition = <span dangerouslySetInnerHTML={{__html: word && word.locative_label + ' '}} />;
+    <div className="word">
+      <div className="container">
 
-    return (
-      <main className="word">
-
-        <div className="heading">
-          <div className="word-title">{word.main_field_value} ({word.word_type.name.toLowerCase()})</div>
-          <div className="word-explanation">({word.explanations.general.length ? word.explanations.general : 'кількість'})</div>
+        <div className="row">
+          <div className="col offset-lg-1 heading">
+            <div className="word-title">{word.main_field_value} ({word.word_type.name.toLowerCase()})</div>
+            <div className="word-explanation">({word.explanations.general.length ? word.explanations.general : 'кількість'})</div>
+          </div>
         </div>
 
 
         <div className="row">
 
-          <div className="side">
-            <button className="active">{word.main_field_value} ({word.word_type.abbr})</button>
-            <button className="">{word.main_field_value} ({word.word_type.abbr}) ({word.number_formatted})</button>
+          <div className="col-sm-3 col-lg-2 offset-lg-1">
+            <div className="side">
+              <button className="btn btn-md btn-primary">{word.main_field_value} ({word.word_type.abbr})</button>
+              <button className="btn btn-md btn-secondary">{word.main_field_value} ({word.word_type.abbr}) ({word.number_formatted})</button>
+            </div>
           </div>
 
-          <div className="table">
-            <table>
-              <thead>
+          <div className="col-sm-9 col-lg-8">
+            <div className="table">
+              <table>
+                <thead>
                 <tr>
                   <th>Відмінки</th>
-                  <th>Чоловічий та середній</th>
+                  <th>Чоловічий та&nbsp;середній</th>
                   <th>Жіночий</th>
                 </tr>
-              </thead>
-              <tbody>
+                </thead>
+                <tbody>
                 {
                   Object.entries(CASES).map( ([caseName, caseValue], i, arr) => {
                     return (<tr key={caseName}>
@@ -60,16 +63,15 @@ class Numeral extends Component {
                     </tr>)
                   })
                 }
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </div>
           </div>
 
         </div>
-
-
-      </main>
-    );
-  }
+      </div>
+    </div>
+  );
 }
 
 export default Numeral;

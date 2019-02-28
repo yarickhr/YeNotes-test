@@ -1,14 +1,9 @@
-/* fonts */
-$bold: 'HelveticaBold', Arial, sans-serif;
-
-/* colors */
-$beige: rgb(228, 189, 125);
-$red: rgb(220, 81, 98);
+@import "./variables";
 
 
-  /* common styles */
+/* common styles */
 body {
-  color: rgb(18, 45, 75);
+  color: $darkSlateBlue;
   font-family: 'Helvetica', Arial, sans-serif;
   font-size: 16px;
   letter-spacing: .3px;
@@ -16,7 +11,8 @@ body {
 
 header,
 footer {
-  background-color: rgb(18, 45, 75);
+  background-color: $darkSlateBlue;
+  color: #fff;
 }
 header {
   position: relative;
@@ -24,12 +20,9 @@ header {
   height: 70px;
   box-shadow: 0 2px 22px rgba(69, 69, 69, 0.4);
 }
-footer {
-  height: 144px;
-}
 .main {
-  padding: 50px 0;
   background-color: #f6f6f5;
+  background-size: cover;
 }
 .heading {
   margin-bottom: 24px;
@@ -38,8 +31,6 @@ footer {
   display: flex;
 }
 .side {
-  width: 160px;
-  margin-right: 30px;
   button {
     width: 100%;
     margin-bottom: 8px;
@@ -49,25 +40,59 @@ footer {
 
 /* typography */
 button {
-  height: 36px;
-  padding: 10px;
   border: none;
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0 0 7px rgba(113, 113, 113, 0.36);
-  font-family: $bold;
-  font-size: 14px;
+}
 
-  &.active {
+.btn {
+  font-size: 14px;
+  white-space: nowrap;
+
+  &-secondary {
+    background-color: white;
+    box-shadow: 0 0 7px rgba(113, 113, 113, 0.36);
+    font-family: $bold;
+    text-shadow: 0 2px 3px rgba(0,0,0,.2);
+  }
+  &-primary {
     background-color: $beige;
     color: #fff;
-    text-shadow: 0px 2px 3px rgba(0,0,0,.2);
+    box-shadow: 0 0 7px rgba(113, 113, 113, 0.36);
+    font-family: $bold;
+    text-shadow: 0 2px 3px rgba(0,0,0,.2);
   }
+  &-success {
+    background-color: $red;
+    color: #fff;
+    box-shadow: 0 0 7px rgba(113, 113, 113, 0.36);
+    font-family: $bold;
+    text-shadow: 0 2px 3px rgba(0,0,0,.2);
+  }
+  &-icon {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &-sm {
+    height: 32px;
+    padding: 8px 12px;
+    border-radius: 2px;
+  }
+  &-md {
+    height: 36px;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+}
+
+input {
+  border-radius: 2px;
+  border: none;
+  padding: 8px 15px;
 }
 
 
 table {
-  min-width: 730px;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 0 7px rgba(113, 113, 113, 0.36);
   border-collapse: collapse;
@@ -78,6 +103,9 @@ td {
   &:first-child {
     font-weight: bold;
     color: $red;
+  }
+  &:not(:first-child) {
+    width: 40%;
   }
 }
 tr:nth-child(2n-1) td {
@@ -91,8 +119,9 @@ th {
 
 /* blocks */
 .word {
-  display: table;
   margin: 0 auto;
+  padding: 50px 0;
+  background-color: rgba(white, .88);
   &-title {
     font-family: $bold;
     font-size: 18px;
@@ -102,4 +131,5 @@ th {
     font-size: 14px;
   }
 }
+
 
