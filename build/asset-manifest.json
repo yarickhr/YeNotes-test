@@ -1,15 +1,15 @@
 {
-  "main.css": "/build/static/css/main.8385ab5f.chunk.css",
-  "main.js": "/build/static/js/main.93847aeb.chunk.js",
-  "main.js.map": "/build/static/js/main.93847aeb.chunk.js.map",
-  "runtime~main.js": "/build/static/js/runtime~main.cb13a552.js",
-  "runtime~main.js.map": "/build/static/js/runtime~main.cb13a552.js.map",
-  "static/css/2.7f5c6357.chunk.css": "/build/static/css/2.7f5c6357.chunk.css",
-  "static/js/2.3a4dbb34.chunk.js": "/build/static/js/2.3a4dbb34.chunk.js",
-  "static/js/2.3a4dbb34.chunk.js.map": "/build/static/js/2.3a4dbb34.chunk.js.map",
-  "index.html": "/build/index.html",
-  "precache-manifest.0e361637a58043282edec3c9e7e75ef3.js": "/build/precache-manifest.0e361637a58043282edec3c9e7e75ef3.js",
-  "service-worker.js": "/build/service-worker.js",
-  "static/css/2.7f5c6357.chunk.css.map": "/build/static/css/2.7f5c6357.chunk.css.map",
-  "static/css/main.8385ab5f.chunk.css.map": "/build/static/css/main.8385ab5f.chunk.css.map"
+  "main.css": "/YeNotes-test/static/css/main.8385ab5f.chunk.css",
+  "main.js": "/YeNotes-test/static/js/main.1f746793.chunk.js",
+  "main.js.map": "/YeNotes-test/static/js/main.1f746793.chunk.js.map",
+  "runtime~main.js": "/YeNotes-test/static/js/runtime~main.cf311eb3.js",
+  "runtime~main.js.map": "/YeNotes-test/static/js/runtime~main.cf311eb3.js.map",
+  "static/css/2.7f5c6357.chunk.css": "/YeNotes-test/static/css/2.7f5c6357.chunk.css",
+  "static/js/2.3a4dbb34.chunk.js": "/YeNotes-test/static/js/2.3a4dbb34.chunk.js",
+  "static/js/2.3a4dbb34.chunk.js.map": "/YeNotes-test/static/js/2.3a4dbb34.chunk.js.map",
+  "index.html": "/YeNotes-test/index.html",
+  "precache-manifest.344bf0dbd8bf2824965e8cdebac8ed9d.js": "/YeNotes-test/precache-manifest.344bf0dbd8bf2824965e8cdebac8ed9d.js",
+  "service-worker.js": "/YeNotes-test/service-worker.js",
+  "static/css/2.7f5c6357.chunk.css.map": "/YeNotes-test/static/css/2.7f5c6357.chunk.css.map",
+  "static/css/main.8385ab5f.chunk.css.map": "/YeNotes-test/static/css/main.8385ab5f.chunk.css.map"
 }
