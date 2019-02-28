@@ -14,7 +14,7 @@ class App extends Component {
 
 
   componentDidMount() {
-    axios.defaults.baseURL = 'http://www.api.yenotes.com';
+    axios.defaults.baseURL = 'https://www.api.yenotes.com';
 
     axios.get('/words/conjugation/search/', {
       params: {
