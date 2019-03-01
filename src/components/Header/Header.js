@@ -7,14 +7,16 @@ const Header = ({search}) => {
 
   let handleSearchClick = (e) => {
     let searchText = e.target.closest('.search').querySelector('input').value;
+    e.target.closest('.search').querySelector('input').value = null;
     return search(searchText);
   };
   let handleKeyUp = (e) => {
     if (e.key === 'Enter') {
       let searchText = e.target.value;
+      e.target.value = null;
       return search(searchText);
     }
-  }
+  };
 
   return (
     <header>
