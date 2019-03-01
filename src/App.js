@@ -13,8 +13,9 @@ import Widgets from './components/Widgets/Widgets';
 class App extends Component {
 
   state = {
-      json: {}
-    };
+    json: {},
+    notFound: false
+  };
 
 
   componentDidMount() {
@@ -45,8 +46,8 @@ class App extends Component {
         <Header search={this.getSearchRequest}/>
 
         <main className="main">
-          {result && (
-            <Numeral word={word}/>
+          { result && (
+            <Numeral word={word} found={!this.state.notFound}/>
           )}
           <Widgets/>
         </main>
@@ -65,13 +66,20 @@ class App extends Component {
       }
     })
       .then( response => {
-        this.setState({
-          json: response.data
-        });
-        // console.dir(response.data);
+        console.dir(response);
+        if (response.data.result.words) {
+          this.setState({
+            json: response.data
+          });
+        } else {
+          this.setState({
+            notFound: true
+          });
+        }
+
       })
       .catch(function (error) {
-        console.log(error);
+        console.dir(error);
       });
   }
 
