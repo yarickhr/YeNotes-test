@@ -51,14 +51,16 @@ const Numeral = ({word}) => {
                     return (<tr key={caseName}>
                       <td>{caseValue}</td>
                       <td>
-                        { i===arr.length-1 ?  preposition : '' }
+                        { i===arr.length-1 && word[caseName + "_masculine"] ?  preposition : '' }
                         { word[caseName + "_masculine"] }
                         { word[caseName + "_masculine_another1"] && ", " + word[caseName + "_masculine_another1"] }
+                        { !word[caseName + "_masculine"] && !word[caseName + "_masculine_another1"] && "-" }
                       </td>
                       <td>
-                        { i===arr.length-1 ?  preposition : '' }
+                        { i===arr.length-1 && word[caseName + "_feminine"] ?  preposition : '' }
                         { word[caseName + "_feminine"] }
                         { word[caseName + "_feminine_another1"] && ", " + word[caseName + "_feminine_another1"] }
+                        { !word[caseName + "_feminine"] && !word[caseName + "_feminine_another1"] && "-" }
                       </td>
                     </tr>)
                   })

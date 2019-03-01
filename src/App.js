@@ -19,26 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     axios.defaults.baseURL = 'http://www.api.yenotes.com';
-
-    axios.get('/words/conjugation/search/', {
-      params: {
-        format: 'json',
-        lang: 'uk',
-        word: 'два'
-      }
-    })
-      .then( response => {
-        this.setState({
-          json: response.data
-        });
-        console.dir(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-      .then(function () {
-        // always executed
-      });
+    this.getSearchRequest('два');
   }
 
   render() {
@@ -61,7 +42,7 @@ class App extends Component {
           />
 
 
-        <Header />
+        <Header search={this.getSearchRequest}/>
 
         <main className="main">
           {result && (
@@ -74,6 +55,27 @@ class App extends Component {
       </div>
     );
   }
+
+  getSearchRequest = (word) => {
+    axios.get('/words/conjugation/search/', {
+      params: {
+        format: 'json',
+        lang: 'uk',
+        word: word
+      }
+    })
+      .then( response => {
+        this.setState({
+          json: response.data
+        });
+        // console.dir(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+
 }
 
 export default App;
