@@ -28,6 +28,7 @@
     list-style-type: none;
     li {
       margin-left: 20px;
+      text-align: right;
     }
   }
 
@@ -62,6 +63,15 @@
   }
 }
 
+@media (max-width: 576px) {
+  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
 @media (max-width: 768px) {
   .footer-brand,
   .footer-legacy {

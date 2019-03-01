@@ -17,7 +17,6 @@ footer {
 header {
   position: relative;
   z-index: 1;
-  height: 70px;
   box-shadow: 0 2px 22px rgba(69, 69, 69, 0.4);
 }
 .main {
@@ -99,22 +98,32 @@ table {
   border-radius: 4px;
 }
 td {
-  padding: 15px 30px;
+  padding: 15px;
   &:first-child {
+    padding-left: 30px;
     font-weight: bold;
     color: $red;
   }
   &:not(:first-child) {
     width: 40%;
   }
+  &:last-child {
+    padding-right: 30px;
+  }
 }
 tr:nth-child(2n-1) td {
   background-color: #efefef;
 }
 th {
-  padding: 15px 30px;
+  padding: 15px;
   text-align: left;
   font-family: $bold;
+  &:first-child {
+    padding-left: 30px;
+  }
+  &:last-child {
+    padding-right: 30px;
+  }
 }
 
 /* blocks */
@@ -132,4 +141,34 @@ th {
   }
 }
 
+
+@media (max-width: 450px) {
+  td,
+  th {
+    &:first-child {
+      padding-left: 15px;
+    }
+    &:last-child {
+      padding-right: 15px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
+  td,
+  th {
+    width: auto !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &:first-child {
+      padding-top: 15px;
+    }
+    &:last-child {
+      padding-bottom: 15px;
+    }
+  }
+}
 

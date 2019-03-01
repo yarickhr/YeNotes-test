@@ -18,7 +18,7 @@ const Header = () => {
               <span className="logo-text">Kyiv Dictionary</span>
             </div>
 
-            <div className="col-4 col-search">
+            <div className="col-sm-4 col-search">
               <div className="search">
                 <input type="search" placeholder="Поиск"/>
                 <button className="btn btn-icon">
@@ -28,7 +28,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="col-2">
+            <div className="col-5 col-sm-3 col-md-2 col-translate">
 
               <div className="translate">
                 <input type="text" value="FR - UA"/>
@@ -44,7 +44,7 @@ const Header = () => {
               <button className="btn btn-sm btn-primary">Log In</button>
             </div>
 
-            <div className="col col">
+            <div className="col col-language">
               <div className="language">
                 <span>UA</span>
                 <i className="fas fa-chevron-down"/>

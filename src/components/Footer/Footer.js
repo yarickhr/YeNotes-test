@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="col-lg-6">
               <ul className="footer-menu">
                 <li>Зв’язок</li>
-                <li>Про нас</li>
+                <li>Про&nbsp;нас</li>
                 <li>Вакансії</li>
                 <li>Угода з користувачем</li>
               </ul>
