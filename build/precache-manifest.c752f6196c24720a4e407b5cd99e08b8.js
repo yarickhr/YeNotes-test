@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/YeNotes-test/build/static/js/runtime~main.8a850066.js"
   },
   {
-    "revision": "01365bf80b19754d0b4d",
-    "url": "/YeNotes-test/build/static/js/main.01365bf8.chunk.js"
+    "revision": "f25ca753d512aceead26",
+    "url": "/YeNotes-test/build/static/js/main.f25ca753.chunk.js"
   },
   {
     "revision": "c38c0d6cb04c0324dfa7",
     "url": "/YeNotes-test/build/static/js/2.c38c0d6c.chunk.js"
   },
   {
-    "revision": "01365bf80b19754d0b4d",
+    "revision": "f25ca753d512aceead26",
     "url": "/YeNotes-test/build/static/css/main.1e026546.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/YeNotes-test/build/static/css/2.7f5c6357.chunk.css"
   },
   {
-    "revision": "8cef853a7c77cd6d3f58d32ec89c85bd",
+    "revision": "dd9d2a7641f351a69c0f196413d84dd9",
     "url": "/YeNotes-test/build/index.html"
   }
 ];

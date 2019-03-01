@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/YeNotes-test/build/precache-manifest.b07b58ad3f16c4334d496b5cbb70a7ab.js"
+  "/YeNotes-test/build/precache-manifest.c752f6196c24720a4e407b5cd99e08b8.js"
 );
 
 workbox.clientsClaim();

@@ -69,7 +69,8 @@ class App extends Component {
         console.dir(response);
         if (response.data.result.words) {
           this.setState({
-            json: response.data
+            json: response.data,
+            notFound: false
           });
         } else {
           this.setState({
