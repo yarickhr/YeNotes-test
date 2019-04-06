@@ -1,0 +1,48 @@
+@import "../../../styles/variables";
+
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  font-size: 14px;
+  white-space: nowrap;
+
+  &-secondary {
+    background-color: white;
+    box-shadow: 0 0 7px rgba(113, 113, 113, 0.36);
+    font-family: $bold;
+    text-shadow: 0 2px 3px rgba(0,0,0,.2);
+  }
+  &-primary {
+    background-color: $beige;
+    color: #fff;
+    box-shadow: 0 0 7px rgba(113, 113, 113, 0.36);
+    font-family: $bold;
+    text-shadow: 0 2px 3px rgba(0,0,0,.2);
+  }
+  &-success {
+    background-color: $red;
+    color: #fff;
+    box-shadow: 0 0 7px rgba(113, 113, 113, 0.36);
+    font-family: $bold;
+    text-shadow: 0 2px 3px rgba(0,0,0,.2);
+  }
+  &-icon {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &-sm {
+    height: 32px;
+    padding: 8px 12px;
+    border-radius: 2px;
+  }
+  &-md {
+    height: 36px;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
+}

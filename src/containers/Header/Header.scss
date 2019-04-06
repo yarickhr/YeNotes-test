@@ -1,4 +1,4 @@
-@import "../../variables";
+@import "../../styles/variables";
 
 /* header */
 .row-header {
@@ -107,6 +107,7 @@
 
 .language {
   text-align: center;
+  white-space: nowrap;
   .fa-chevron-down {
     position: relative;
     top: -2px;

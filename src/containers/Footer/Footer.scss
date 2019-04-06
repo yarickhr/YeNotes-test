@@ -1,4 +1,4 @@
-@import "../../variables";
+@import "../../styles/variables";
 
 .footer {
   padding: 22px 0 0;
@@ -29,6 +29,7 @@
     li {
       margin-left: 20px;
       text-align: right;
+      white-space: nowrap;
     }
   }
 

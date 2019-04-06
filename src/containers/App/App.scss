@@ -1,4 +1,4 @@
-@import "./variables";
+@import "../../styles/variables";
 
 
 /* common styles */
@@ -126,20 +126,6 @@ th {
   }
 }
 
-/* blocks */
-.word {
-  margin: 0 auto;
-  padding: 50px 0;
-  background-color: rgba(white, .88);
-  &-title {
-    font-family: $bold;
-    font-size: 18px;
-  }
-  &-explanation {
-    margin-top: 10px;
-    font-size: 14px;
-  }
-}
 
 
 @media (max-width: 450px) {

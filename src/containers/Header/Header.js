@@ -1,9 +1,13 @@
 import React  from 'react';
+
+import Button from '../../components/common/Button';
+
 import logo from '../../img/logo.jpg';
 import searchIcon from './search.png';
 import './Header.scss';
 
 const Header = ({search}) => {
+  alert('header');
 
   let handleSearchClick = (e) => {
     let searchText = e.target.closest('.search').querySelector('input').value;
@@ -35,10 +39,10 @@ const Header = ({search}) => {
           <div className="col-sm-4 col-search">
             <div className="search">
               <input type="search" placeholder="Поиск" onKeyUp={handleKeyUp}/>
-              <button className="btn btn-icon" onClick={handleSearchClick}>
+              <Button className={'btn btn-icon'} onClick={handleSearchClick}>
                 {/*<i className="fas fa-search"/>*/}
                 <img src={searchIcon} alt="search" className="search-icon" width="17"/>
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -47,15 +51,15 @@ const Header = ({search}) => {
             <div className="translate">
               <input type="text" defaultValue="FR - UA"/>
               <i className="fas fa-exchange-alt"/>
-              <button className="btn btn-icon">
+              <Button className={'btn btn-icon'}>
                 <i className="fas fa-chevron-down"/>
-              </button>
+              </Button>
             </div>
 
           </div>
 
           <div className="col col-user">
-            <button className="btn btn-sm btn-primary">Log In</button>
+            <Button className={'btn btn-sm btn-primary'} text={'Log In'} />
           </div>
 
           <div className="col col-language">

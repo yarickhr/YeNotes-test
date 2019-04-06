@@ -1,16 +1,11 @@
 import React from 'react';
+import './Numeral.scss';
 
-const CASES = {
-  'nominative': 'Називний',
-  'genitive': 'Родовий',
-  'dative': 'Давальний',
-  'accusative': 'Знахідний',
-  'instrumental': 'Орудний',
-  'locative': 'Місцевий',
-};
+import { CASES } from '../../constants/cases';
 
 const Numeral = ({word, found}) => {
 
+  alert('word');
   let preposition = <span dangerouslySetInnerHTML={{__html: word && word.locative_label + ' '}} />;
 
   return (

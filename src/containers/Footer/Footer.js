@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, {memo}  from 'react';
 import './Footer.scss';
 
 import chrome from './chrome.png';
@@ -6,6 +6,10 @@ import facebook from './facebook.png';
 import instagram from './instagram.png';
 
 const Footer = () => {
+
+    alert('footer');
+
+
     return (
       <footer className="footer">
         <div className="container">
@@ -51,4 +55,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default memo(Footer);
