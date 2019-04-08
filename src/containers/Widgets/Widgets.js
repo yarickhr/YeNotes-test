@@ -6,12 +6,12 @@ import ukraine from './ukraine.png';
 
 class Widgets extends PureComponent {
 
-  componentDidMount() {
-    alert('widgets');
-  };
-  componentDidUpdate() {
-    alert('widgets');
-  };
+  // componentDidMount() {
+  //   alert('widgets');
+  // };
+  // componentDidUpdate() {
+  //   alert('widgets');
+  // };
 
   render() {
     return (

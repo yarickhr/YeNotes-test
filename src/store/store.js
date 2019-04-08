@@ -6,7 +6,7 @@ import rootReducer from '../reducers/index'
 
 export const history = createBrowserHistory();
 
-const initialState = {};
+// const initialState = {};
 const enhancers = [];
 const middleware = [thunk, routerMiddleware(history)];
 
@@ -23,11 +23,6 @@ const composedEnhancers = compose(
   ...enhancers
 );
 
-// export default createStore(
-//   connectRouter(history)(rootReducer),
-//   initialState,
-//   composedEnhancers
-// )
 
 export default function configureStore(initialState) {
   return createStore(

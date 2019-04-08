@@ -1,7 +1,9 @@
-import { WORD_HAS_ERRORED,
+import {
+  WORD_HAS_ERRORED,
   WORD_IS_LOADING,
   WORD_NOT_FOUND,
-  WORD_LOADING_SUCCESS } from '../const/actionTypes';
+  WORD_LOADING_SUCCESS, WORD_REQUEST
+} from '../const/actionTypes';
 
 
 export function wordHasErrored(state = false, action) {
@@ -29,6 +31,16 @@ export function wordNotFound(state = false, action) {
   switch (action.type) {
     case WORD_NOT_FOUND:
       return action.notFound;
+
+    default:
+      return state;
+  }
+}
+
+export function wordRequest(state = '', action) {
+  switch (action.type) {
+    case WORD_REQUEST:
+      return action.word;
 
     default:
       return state;

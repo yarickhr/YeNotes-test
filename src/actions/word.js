@@ -1,8 +1,12 @@
 import axios from "axios";
-import { WORD_HAS_ERRORED,
+import {
+  WORD_HAS_ERRORED,
   WORD_IS_LOADING,
   WORD_NOT_FOUND,
-  WORD_LOADING_SUCCESS } from '../const/actionTypes';
+  WORD_REQUEST,
+  WORD_LOADING_SUCCESS
+} from '../const/actionTypes';
+import {push} from "connected-react-router";
 
 export function wordHasErrored(bool) {
   return {
@@ -25,34 +29,27 @@ export function wordNotFound(bool) {
   };
 }
 
+export function wordRequest(word) {
+  return {
+    type: WORD_REQUEST,
+    word
+  };
+}
+
 export function wordLoadingSuccess(data) {
   return {
     type: WORD_LOADING_SUCCESS,
-    data: data
+    data
   };
 }
+
 
 
 export function getSearchRequest(word) {
 
   return (dispatch) => {
+    dispatch(wordRequest(word));
     dispatch(wordIsLoading(true));
-
-    // fetch(url)
-    //   .then((response) => {
-    //     console.log(response)
-    //     if (!response.ok) {
-    //       throw Error(response.statusText);
-    //     }
-    //
-    //     dispatch(wordIsLoading(false));
-    //
-    //     return response;
-    //   })
-    //   .then((response) => response.json())
-    //   .then((items) => dispatch(wordLoadingSuccess( items ))) // ES6 property value shorthand for { items: items }
-    //   .catch(() => dispatch(wordHasErrored( true )));
-
 
     axios.defaults.baseURL = 'http://www.api.yenotes.com';
     axios.get('/words/conjugation/search/', {
@@ -68,16 +65,9 @@ export function getSearchRequest(word) {
         if (response.data.result.words) {
           dispatch(wordLoadingSuccess( data ));
           dispatch(wordNotFound( false ));
-          // this.setState({
-          //   json: response.data,
-          //   notFound: false
-          // });
+          dispatch(push('/numeral/' + word));
         } else {
           dispatch(wordNotFound( true ));
-
-          // this.setState({
-          //   notFound: true
-          // });
         }
 
       })

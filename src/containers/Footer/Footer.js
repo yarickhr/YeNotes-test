@@ -7,7 +7,7 @@ import instagram from './instagram.png';
 
 const Footer = () => {
 
-    alert('footer');
+    // alert('footer');
 
 
     return (

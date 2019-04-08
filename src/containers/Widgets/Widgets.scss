@@ -37,6 +37,7 @@
 .col-word {
   .widget-box {
     background-size: cover;
+    background-image: url(./shepherd.jpg);
   }
   .label {
     position: relative;
@@ -67,7 +68,9 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    background-position-x: 50%;
     background-size: cover;
+    background-image: url(./create.jpg);
   }
 
   button {
