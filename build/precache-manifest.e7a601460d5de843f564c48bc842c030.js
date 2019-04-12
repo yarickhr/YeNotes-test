@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/YeNotes-test/build/static/media/text-foto.704f837b.png"
   },
   {
-    "revision": "9e0e68589f069f196612",
+    "revision": "aa909fde0a976afa4d6b",
     "url": "/YeNotes-test/build/static/css/main.f6fe515f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/YeNotes-test/build/static/media/create.d9fd9d97.jpg"
   },
   {
-    "revision": "a1c1cef6dc410c953cf9",
-    "url": "/YeNotes-test/build/static/js/2.a1c1cef6.chunk.js"
+    "revision": "da50c9b8f702947530cd",
+    "url": "/YeNotes-test/build/static/js/2.da50c9b8.chunk.js"
   },
   {
     "revision": "45028f0bd9cdb1adb2dc962a0665c533",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/YeNotes-test/build/static/media/HelveticaBold.c8af73bb.woff"
   },
   {
-    "revision": "9e0e68589f069f196612",
-    "url": "/YeNotes-test/build/static/js/main.9e0e6858.chunk.js"
+    "revision": "aa909fde0a976afa4d6b",
+    "url": "/YeNotes-test/build/static/js/main.aa909fde.chunk.js"
   },
   {
     "revision": "462806316fea535a6a57651bc2b000b0",
@@ -52,11 +52,11 @@ self.__precacheManifest = [
     "url": "/YeNotes-test/build/static/media/shepherd.bb515747.jpg"
   },
   {
-    "revision": "a1c1cef6dc410c953cf9",
+    "revision": "da50c9b8f702947530cd",
     "url": "/YeNotes-test/build/static/css/2.cf8f76f1.chunk.css"
   },
   {
-    "revision": "586877532229a3a91bef2012b41e1468",
+    "revision": "68f86cc906227f189cdec3e1f20ed71b",
     "url": "/YeNotes-test/build/index.html"
   }
 ];
