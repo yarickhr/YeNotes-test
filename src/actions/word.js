@@ -8,6 +8,9 @@ import {
 } from '../const/actionTypes';
 import {push} from "connected-react-router";
 
+import { updateIntl } from 'react-intl-redux';
+
+
 export function wordHasErrored(bool) {
   return {
     type: WORD_HAS_ERRORED,
@@ -78,4 +81,14 @@ export function getSearchRequest(word) {
 
   }
 
+}
+
+
+export function changeLocale(locale) {
+  return dispatch => {
+    console.log('in');
+    dispatch(updateIntl({
+      locale
+    }));
+  }
 }

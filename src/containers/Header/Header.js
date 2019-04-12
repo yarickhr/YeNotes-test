@@ -6,9 +6,9 @@ import Button from '../../components/common/Button';
 import logo from '../../img/logo.jpg';
 import searchIcon from './search.png';
 import './Header.scss';
-import {getSearchRequest} from "../../actions/word";
+import {changeLocale, getSearchRequest} from "../../actions/word";
 import {connect} from "react-redux";
-import {FormattedMessage} from "react-intl";
+import {FormattedMessage, injectIntl} from "react-intl";
 
 class Header extends Component {
 
@@ -75,12 +75,11 @@ class Header extends Component {
             </div>
 
             <div className="col col-language">
-              <div className="language">
-                <span>
-                  <FormattedMessage id="header.lang"
-                                    description="Заголовок вибору мови"
-                                    values={{ abbr: 'UA' }}/>
-                </span>
+              <div className="language" onClick={ () => this.props.changeLocale('en') }>
+                <FormattedMessage id="header.lang"
+                                  description="Заголовок вибору мови"
+                                  values={{ abbr: 'UA' }}/>
+                <span>{this.props.locale}</span>
                 <i className="fas fa-chevron-down"/>
               </div>
             </div>
@@ -96,13 +95,18 @@ class Header extends Component {
 const mapStateToProps = (state) => {
   return {
     word: state.wordRequest,
-    router: state.router
+    router: state.router,
+    locale: state.payload ? state.payload.locale : ''
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    search: word => dispatch(getSearchRequest(word))
+    search: word => dispatch(getSearchRequest(word)),
+    changeLocale: locale => {
+
+      return dispatch(changeLocale(locale))
+    }
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default injectIntl(connect(mapStateToProps, mapDispatchToProps)(Header));

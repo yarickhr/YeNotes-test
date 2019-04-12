@@ -15,6 +15,7 @@
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
     "react-intl": "^2.8.0",
+    "react-intl-redux": "^2.1.0",
     "react-redux": "^5.1.1",
     "react-router": "4.4.0-beta.8",
     "react-router-dom": "^4.4.0-beta.8",
@@ -25,7 +26,7 @@
     "serve": "10.1.2"
   },
   "scripts": {
-    "deploy": "now && now alias",
+    "deploy": "now && now --target production",
     "start": "react-scripts start",
     "now-start": "serve -s ./build",
     "build": "react-scripts build",

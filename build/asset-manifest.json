@@ -1,15 +1,19 @@
 {
-  "main.css": "/YeNotes-test/build/static/css/main.1e026546.chunk.css",
-  "main.js": "/YeNotes-test/build/static/js/main.f25ca753.chunk.js",
-  "main.js.map": "/YeNotes-test/build/static/js/main.f25ca753.chunk.js.map",
+  "main.css": "/YeNotes-test/build/static/css/main.f6fe515f.chunk.css",
+  "main.js": "/YeNotes-test/build/static/js/main.9e0e6858.chunk.js",
+  "main.js.map": "/YeNotes-test/build/static/js/main.9e0e6858.chunk.js.map",
   "runtime~main.js": "/YeNotes-test/build/static/js/runtime~main.8a850066.js",
   "runtime~main.js.map": "/YeNotes-test/build/static/js/runtime~main.8a850066.js.map",
-  "static/css/2.7f5c6357.chunk.css": "/YeNotes-test/build/static/css/2.7f5c6357.chunk.css",
-  "static/js/2.c38c0d6c.chunk.js": "/YeNotes-test/build/static/js/2.c38c0d6c.chunk.js",
-  "static/js/2.c38c0d6c.chunk.js.map": "/YeNotes-test/build/static/js/2.c38c0d6c.chunk.js.map",
+  "static/css/2.cf8f76f1.chunk.css": "/YeNotes-test/build/static/css/2.cf8f76f1.chunk.css",
+  "static/js/2.a1c1cef6.chunk.js": "/YeNotes-test/build/static/js/2.a1c1cef6.chunk.js",
+  "static/js/2.a1c1cef6.chunk.js.map": "/YeNotes-test/build/static/js/2.a1c1cef6.chunk.js.map",
   "index.html": "/YeNotes-test/build/index.html",
-  "precache-manifest.c752f6196c24720a4e407b5cd99e08b8.js": "/YeNotes-test/build/precache-manifest.c752f6196c24720a4e407b5cd99e08b8.js",
+  "precache-manifest.cc8462de485424a6a56148e3eb32d4c4.js": "/YeNotes-test/build/precache-manifest.cc8462de485424a6a56148e3eb32d4c4.js",
   "service-worker.js": "/YeNotes-test/build/service-worker.js",
-  "static/css/2.7f5c6357.chunk.css.map": "/YeNotes-test/build/static/css/2.7f5c6357.chunk.css.map",
-  "static/css/main.1e026546.chunk.css.map": "/YeNotes-test/build/static/css/main.1e026546.chunk.css.map"
+  "static/css/2.cf8f76f1.chunk.css.map": "/YeNotes-test/build/static/css/2.cf8f76f1.chunk.css.map",
+  "static/css/main.f6fe515f.chunk.css.map": "/YeNotes-test/build/static/css/main.f6fe515f.chunk.css.map",
+  "static/media/Home.scss": "/YeNotes-test/build/static/media/HelveticaRegular.45028f0b.woff",
+  "static/media/Widgets.scss": "/YeNotes-test/build/static/media/shepherd.bb515747.jpg",
+  "static/media/all.css": "/YeNotes-test/build/static/media/fa-solid-900.b70cea03.ttf",
+  "static/media/App.scss": "/YeNotes-test/build/static/media/text-foto.704f837b.png"
 }

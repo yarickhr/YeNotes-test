@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
+
+import { intlReducer } from 'react-intl-redux'
+
 import {
   wordHasErrored,
   wordIsLoading,
   wordNotFound,
   wordRequest,
   wordLoadingSuccess,
-  // callHistoryMethod
 } from './word';
 
 export default combineReducers({
@@ -14,5 +16,5 @@ export default combineReducers({
   wordNotFound,
   wordRequest,
   wordLoadingSuccess,
-  // callHistoryMethod
+  intl: intlReducer
 });
