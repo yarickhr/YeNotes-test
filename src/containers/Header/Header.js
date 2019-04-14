@@ -6,7 +6,7 @@ import Button from '../../components/common/Button';
 import logo from '../../img/logo.jpg';
 import searchIcon from './search.png';
 import './Header.scss';
-import {changeLocale, getSearchRequest} from "../../actions/word";
+import {changeLocale, wordRequest} from "../../actions/word";
 import {connect} from "react-redux";
 import {FormattedMessage, injectIntl} from "react-intl";
 
@@ -20,13 +20,14 @@ class Header extends Component {
   handleSearchClick(e) {
     let searchText = e.target.closest('.search').querySelector('input').value;
     e.target.closest('.search').querySelector('input').value = null;
-    return this.props.search(searchText);
+    return this.props.wordRequest(searchText);
   };
+
   handleKeyUp(e) {
     if (e.key === 'Enter') {
       let searchText = e.target.value;
       e.target.value = null;
-      return this.props.search(searchText);
+      return this.props.wordRequest(searchText);
     }
   };
 
@@ -99,14 +100,14 @@ const mapStateToProps = (state) => {
     locale: state.payload ? state.payload.locale : ''
   };
 };
-const mapDispatchToProps = (dispatch) => {
-  return {
-    search: word => dispatch(getSearchRequest(word)),
-    changeLocale: locale => {
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     wordRequest,
+//     changeLocale,
+//   };
+// }; we can move to connect, see below
 
-      return dispatch(changeLocale(locale))
-    }
-  };
-};
-
-export default injectIntl(connect(mapStateToProps, mapDispatchToProps)(Header));
+export default injectIntl(connect(mapStateToProps, {
+  wordRequest,
+  changeLocale,
+})(Header));

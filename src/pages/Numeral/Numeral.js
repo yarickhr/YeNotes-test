@@ -4,7 +4,7 @@ import './Numeral.scss';
 
 import { CASES } from '../../const/cases';
 import {Helmet} from "react-helmet";
-import {getSearchRequest} from "../../actions/word";
+import {wordRequest} from "../../actions/word";
 import {connect} from "react-redux";
 
 class Numeral extends Component {
@@ -12,7 +12,8 @@ class Numeral extends Component {
   componentDidMount() {
     // alert('word');
     let word = this.props.router.location.pathname.split('/')[2];
-    this.props.getSearchRequest( word );
+    console.log('CA:LL')
+    this.props.wordRequest( word );
   }
 
   render() {
@@ -127,19 +128,26 @@ Numeral.propTypes = {
   notFound: PropTypes.bool.isRequired,
 };
 // export default App;
-const mapStateToProps = (state) => {
-  return {
-    hasErrored: state.wordHasErrored,
-    isLoading: state.wordIsLoading,
-    notFound: state.wordNotFound,
-    data: state.wordLoadingSuccess,
-    router: state.router
-  };
-};
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getSearchRequest: (word) => dispatch(getSearchRequest(word))
-  };
-};
+// const mapStateToProps = (state) => {
+//   return {
+//     hasErrored: state.wordHasErrored,
+//     isLoading: state.wordIsLoading,
+//     notFound: state.wordNotFound,
+//     data: state.wordLoadingSuccess,
+//     router: state.router
+//   };
+// };
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     // getSearchRequest: (word) => dispatch(getSearchRequest(word)),
+//     wordRequest
+//   };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Numeral);
+export default connect((state) => ({ // same as separate mapStateToProps and mapDispatchToProps, but in connect
+  hasErrored: state.wordHasErrored,
+  isLoading: state.wordIsLoading,
+  notFound: state.wordNotFound,
+  data: state.wordLoadingSuccess,
+  router: state.router
+}), {wordRequest})(Numeral);

@@ -2,12 +2,14 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 import thunk from 'redux-thunk'
 import { createBrowserHistory } from 'history'
+import searchRequestMiddleware from './middleware/searchRequestMiddleware';
 import rootReducer from '../reducers/index'
+
 
 export const history = createBrowserHistory();
 
 const enhancers = [];
-const middleware = [thunk, routerMiddleware(history)];
+const middleware = [thunk, routerMiddleware(history), searchRequestMiddleware];
 
 if (process.env.NODE_ENV === 'development') {
   const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__;

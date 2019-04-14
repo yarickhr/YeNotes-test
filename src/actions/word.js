@@ -48,40 +48,40 @@ export function wordLoadingSuccess(data) {
 
 
 
-export function getSearchRequest(word) {
+// export function getSearchRequest(word) { // move this to middleware
 
-  return (dispatch) => {
-    dispatch(wordRequest(word));
-    dispatch(wordIsLoading(true));
+//   return (dispatch) => {
+//     dispatch(wordRequest(word));
+//     dispatch(wordIsLoading(true));
 
-    axios.defaults.baseURL = 'http://www.api.yenotes.com';
-    axios.get('/words/conjugation/search/', {
-      params: {
-        format: 'json',
-        lang: 'uk',
-        word: word
-      }
-    })
-      .then( response => {
-        dispatch(wordIsLoading(false));
-        let data = response.data;
-        if (response.data.result.words) {
-          dispatch(wordLoadingSuccess( data ));
-          dispatch(wordNotFound( false ));
-          dispatch(push('/numeral/' + word));
-        } else {
-          dispatch(wordNotFound( true ));
-        }
+//     axios.defaults.baseURL = 'http://www.api.yenotes.com';
+//     axios.get('/words/conjugation/search/', {
+//       params: {
+//         format: 'json',
+//         lang: 'uk',
+//         word: word
+//       }
+//     })
+//       .then( response => {
+//         dispatch(wordIsLoading(false));
+//         let data = response.data;
+//         if (data && data.result && data.result.words) {
+//           dispatch(wordLoadingSuccess( data ));
+//           dispatch(wordNotFound( false ));
+//           dispatch(push('/numeral/' + word));
+//         } else {
+//           dispatch(wordNotFound( true ));
+//         }
 
-      })
-      .catch(function (error) {
-        console.dir(error);
-        dispatch(wordHasErrored( true ));
-      });
+//       })
+//       .catch(function (error) {
+//         console.dir(error);
+//         dispatch(wordHasErrored( true ));
+//       });
 
-  }
+//   }
 
-}
+// }
 
 
 export function changeLocale(locale) {

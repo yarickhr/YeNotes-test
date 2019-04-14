@@ -12,7 +12,9 @@ import * as serviceWorker from './serviceWorker';
 
 
 /* redux, store */
-let initialState = {};
+let initialState = {
+  notFound: false
+};
 const store = configureStore(initialState);
 
 /* оффлайн */
