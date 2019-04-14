@@ -12,7 +12,6 @@ class Numeral extends Component {
   componentDidMount() {
     // alert('word');
     let word = this.props.router.location.pathname.split('/')[2];
-    console.log('CA:LL')
     this.props.wordRequest( word );
   }
 
